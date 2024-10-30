@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="All">
+        <h1 style="position: relative; top: 15px;">Grading System</h1>
+        <p style="color: red; display: none; margin-top: 10px; margin-left: 10px;" id="errorMsg">Haba, When it is not like you cannot see!! </p>
+        <input type="number" placeholder="Input Score here" id="score"><br><br>
+        <button onclick="checkGrade()">Check</button>
+        <div id="display" style="color: white; text-align: center; margin-top: 20px;"></div> 
+    </div>
+
+
+
+
+    <script>
+        var songF = new Audio("audios/songF.mp3")
+        var songE = new Audio("audios/songE.m4a")
+        var songD = new Audio("audios/songD.mp3")
+        var songC = new Audio("audios/songC.mp3")
+        var songB = new Audio("audios/songB.mp3")
+        var songA = new Audio("audios/songA.mp3")
+
+        function checkGrade(){
+            var newScore = document.getElementById('score').value
+            // var newScore = Number(newScore)
+            if (newScore === '') {
+                errorMsg.style.display = 'block'
+            } else{
+                errorMsg.style.display = 'none' 
+                if(newScore >= 0 && newScore < 39){
+                    console.log('F- You failed ')
+                    display.innerText = 'F - You failed'
+                    songE.play()
+                    }
+                }if(newScore >= 39 && newScore < 45){
+                    console.log('E- Very Poor ')
+                    display.innerText = 'E - Very Poor'
+                    songF.play()
+
+                    }if(newScore >= 45 && newScore < 49){
+                    console.log('D - Pass ')
+                    display.innerText = 'D - Pass'
+                    songD.play()
+
+                    }if(newScore >= 50 && newScore < 59){
+                    console.log('C - Good ')
+                    display.innerText = 'C - Good'
+                    songC.play()
+
+                    }if(newScore >= 60 && newScore < 69){
+                    console.log('B - Excellent ')
+                    display.innerText = 'B - Excellent'
+                    songB.play()
+
+                    }if(newScore >= 70 && newScore < 100){
+                    console.log('A - Outstanding ')
+                    display.innerText = 'A - Outstanding'
+                    songA.play()
+                    }
+           
+            }
+    </script>
+</body>
+</html>

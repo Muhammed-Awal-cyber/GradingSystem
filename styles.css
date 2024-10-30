@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: goldenrod;
+h1{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+.All{
+    width: 25%;
+    height: 30vh;
+    background-color:;
+    justify-content: center;
+    margin-left: 40%;
+    margin-top: 20%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.253) 3px 3px 3px 3px;
+
+}
+.All:hover{
+    /* background-color:black; */
+    /* box-shadow: black 2px 2px 2px; */
+}
+input{
+    margin-left: 14px;
+    margin-top: 7%;
+    width: 270px;
+    height: 5.5vh;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    
+    
+}
+button{
+    margin-left: 35%;
+    border: none;
+    color: black;
+    width: 95px;
+    height: 5vh;
+    border-radius: 7px;
+    
+
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grading System</h1>
+    <p style="color: red; display: none;" id="errorMsg">Haba, When it is not like you cannot see!! </p>
+    <input type="number" placeholder="Score" id="score">
+    <button onclick="checkGrade()">Check</button>
+    <div id="display"></div>
+
+    <script>
+        var songF = new Audio()
+        function checkGrade(){
+            var newScore = document.getElementById('score').value
+            // var newScore = Number(newScore)
+            if (newScore === '') {
+                errorMsg.style.display = 'block'
+            } else{
+                errorMsg.style.display = 'none' 
+                if(newScore >= 0 && newScore < 40){
+                    console.log('F- You failed ')
+                    songF.play()
+                }else{
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>
